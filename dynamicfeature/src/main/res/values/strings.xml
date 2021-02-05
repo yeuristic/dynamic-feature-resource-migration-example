@@ -1,0 +1,4 @@
+<resources>
+    <string name="text_dynamic_a">Dynamic A</string>
+    <string name="text_dynamic_b">Dynamic B</string>
+</resources>

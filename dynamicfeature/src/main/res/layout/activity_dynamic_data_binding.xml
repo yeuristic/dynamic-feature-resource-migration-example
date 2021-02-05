@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.yeuristic.example.dynamicfeature.DynamicDataBindingViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".DynamicDataBindingActivity">
+
+        <ImageView
+            android:id="@+id/image_view_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@{viewModel.toggle ? @drawable/ic_foundation_24px : @drawable/ic_dynamic_feed_24px}" />
+
+        <TextView
+            android:id="@+id/text_view_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.toggle ? @string/text_base_a : @string/text_base_b}"
+            android:textColor="@{viewModel.toggle ? @color/base_a : @color/base_b}" />
+
+        <TextView
+            android:id="@+id/text_view_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.toggle ? @string/text_base_a : @string/text_dynamic_b}"
+            android:textColor="@{viewModel.toggle ? @color/dynamic_a : @color/base_b}" />
+
+        <TextView
+            android:id="@+id/text_view_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.toggle ? @string/text_dynamic_a : @string/text_base_b}"
+            android:textColor="@{viewModel.toggle ? @color/base_a : @color/dynamic_b}" />
+
+        <TextView
+            android:id="@+id/text_view_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.toggle ? @string/text_dynamic_a : @string/text_dynamic_b}"
+            android:textColor="@{viewModel.toggle ? @color/dynamic_a : @color/dynamic_b}" />
+
+        <Button
+            android:id="@+id/button_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@{viewModel.toggle ? @dimen/dynamic_dimen : @dimen/base_dimen }"
+            android:text="Toggle" />
+
+    </LinearLayout>
+</layout>

@@ -23,11 +23,13 @@ class DynamicActivity : AppCompatActivity(), View.OnClickListener {
         binding.imageView2.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_foundation_24px))
 
         binding.button.setOnClickListener(this)
+        binding.button2.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
         when(v) {
             binding.button -> startActivity(Intent(this, DynamicJavaActivity::class.java))
+            binding.button2 -> startActivity(Intent(this, DynamicDataBindingActivity::class.java))
         }
     }
 }

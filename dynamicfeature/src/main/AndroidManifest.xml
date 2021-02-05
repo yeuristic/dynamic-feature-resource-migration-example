@@ -14,7 +14,8 @@
     </dist:module>
 
     <application>
-        <activity android:name=".DynamicJavaActivity"></activity>
+        <activity android:name=".DynamicDataBindingActivity"></activity>
+        <activity android:name=".DynamicJavaActivity" />
         <activity android:name=".DynamicActivity" />
     </application>
 
